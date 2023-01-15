@@ -10,7 +10,7 @@ import com.alexjunior.projectspringbootjpa.entities.User;
 import com.alexjunior.projectspringbootjpa.repositories.UserRepository;
 
 @Service
-public class UserServices {
+public class UserService {
 
     @Autowired
     private UserRepository repository;
