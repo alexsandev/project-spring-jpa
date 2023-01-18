@@ -5,20 +5,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.alexjunior.projectspringbootjpa.entities.Category;
-import com.alexjunior.projectspringbootjpa.repositories.CategoryRepository;
+import com.alexjunior.projectspringbootjpa.entities.Product;
+import com.alexjunior.projectspringbootjpa.repositories.ProductRepository;
 
 @Service
-public class CategoryService {
+public class ProductService {
 
     @Autowired
-    private CategoryRepository repository;
+    private ProductRepository repository;
 
-    public List<Category> findAll(){
+    public List<Product> findAll(){
         return repository.findAll();
     }
-    
-    public Category findById(Long id){
+
+    public Product findById(Long id){
         return repository.findById(id).get();
     }
 }

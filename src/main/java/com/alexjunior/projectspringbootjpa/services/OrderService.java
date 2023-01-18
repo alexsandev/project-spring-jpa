@@ -1,6 +1,5 @@
 package com.alexjunior.projectspringbootjpa.services;
 
-import java.util.Optional;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,6 @@ public class OrderService {
     }
 
     public Order findById(Long id){
-        Optional<Order> obj = repository.findById(id);
-        return obj.get();
+       return repository.findById(id).get(); 
     }
 }
