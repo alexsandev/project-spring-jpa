@@ -128,4 +128,9 @@ public class Order implements Serializable {
         return true;
     }
 
+    public Double getTotal(){
+
+        return getItems().stream().map(x -> x.getSubTotal()).reduce(0.0, (a , b) -> a + b);
+         
+    }
 }
